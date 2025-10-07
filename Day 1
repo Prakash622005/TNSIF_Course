@@ -1,1 +1,231 @@
+Class and Objects: 
 
+class Car {
+    // Properties
+    String brand;
+    int year;
+
+    // Method
+    void displayInfo() {
+        System.out.println("Brand: " + brand + ", Year: " + year);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects
+        Car car1 = new Car();
+        car1.brand = "Toyota";
+        car1.year = 2021;
+
+        car1.displayInfo();
+    }
+}
+
+
+Encapsulation:
+
+class BankAccount {
+    private double balance;  // hidden data
+
+    // Setter
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    // Getter
+    public double getBalance() {
+        return balance;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.deposit(5000);
+        System.out.println("Current Balance: " + acc.getBalance());
+    }
+}
+
+Inheritance:
+
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();  // inherited method
+        dog.bark();
+    }
+}
+
+Polymorphism:
+
+    Methooe overloading:
+  class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(5, 10));
+        System.out.println(calc.add(3.5, 2.5));
+    }
+}
+
+method overriding:
+  class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a = new Dog(); // Parent reference, Child object
+        a.sound(); // Calls Dog’s method (runtime polymorphism)
+    }
+}
+
+
+Abstraction:
+  abstract class Shape {
+    abstract void draw(); // abstract method (no body)
+    
+    void display() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a Circle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.display();
+        s.draw();
+    }
+}
+
+
+Interface example:
+  interface Vehicle {
+    void start(); // implicitly public and abstract
+}
+
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car starts with key");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle v = new Car();
+        v.start();
+    }
+}
+
+Interface with constructor:
+class Person {
+    Person() {
+        System.out.println("Person Constructor");
+    }
+}
+
+class Student extends Person {
+    Student() {
+        super(); // calls parent constructor
+        System.out.println("Student Constructor");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        new Student();
+    }
+}
+
+Object and this keyword:
+class Employee {
+    String name;
+    int id;
+
+    Employee(String name, int id) {
+        this.name = name; // refers to instance variable
+        this.id = id;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", ID: " + id);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee("Prakash", 101);
+        emp.display();
+    }
+}
+
+Example with All Oops Concepts:
+// Abstraction + Inheritance + Polymorphism + Encapsulation
+abstract class Vehicle {
+    private String brand;
+
+    Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    abstract void start(); // abstraction
+}
+
+class Car extends Vehicle {
+    Car(String brand) {
+        super(brand);
+    }
+
+    void start() { // overriding
+        System.out.println(getBrand() + " car starts with a button");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle v = new Car("Tesla"); // runtime polymorphism
+        v.start();
+    }
+}
