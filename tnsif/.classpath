@@ -5,6 +5,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/pgsql"/>
+	<classpathentry excluding="com/tnsif/testing/junit/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/com/tnsif/testing/junit"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
