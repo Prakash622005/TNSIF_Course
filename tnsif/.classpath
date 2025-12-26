@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-23">
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/pgsql"/>
+	<classpathentry excluding="com/tnsif/testing/junit/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/com/tnsif/testing/junit"/>
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/postgresql-42.7.8.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/pgsql"/>
-	<classpathentry excluding="com/tnsif/testing/junit/" kind="src" path="src"/>
-	<classpathentry kind="src" path="src/com/tnsif/testing/junit"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

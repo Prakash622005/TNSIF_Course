@@ -12,7 +12,7 @@ public class JDBC_Connect {
 		
 		String url = "jdbc:postgresql://localhost:5432/St_Joseph";
 		String username = "postgres";
-		String password = "Data@123";
+		String password = "1234";
 		
 		
 		try {
